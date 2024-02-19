@@ -1,0 +1,192 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <script
+      src="script.js"
+      defer
+    ></script>
+    <title>Pet adopter</title>
+  </head>
+  <body>
+    <aside>
+      <div class="profile-maker">
+        <h2>Legg inn ett nytt dyr</h2>
+        <form
+          name="pet-profile"
+          id="main-form"
+        >
+          <!-- Choose pet type -->
+          <p>Dyret er en</p>
+
+          <label for="cat">
+            <input
+              required
+              type="radio"
+              id="cat"
+              name="pet-type"
+              value="cat"
+            />
+            Katt
+          </label>
+          <label for="dog">
+            <input
+              type="radio"
+              id="dog"
+              name="pet-type"
+              value="dog"
+            />
+            Hund
+          </label>
+          <br />
+
+          <!-- Pick pet's gender -->
+          <label for="gender">
+            <select
+              name="gender"
+              id="gender"
+              aria-label="Velg kjønn"
+              required
+            >
+              <option
+                value=""
+                disabled
+                selected
+              >
+                Velg kjønn
+              </option>
+              <option value="♂">♂</option>
+              <option value="♂ (Kastrert)">♂ (Kastrert)</option>
+              <option value="♀">♀</option>
+              <option value="♀ (Sterilisert)">♀ (Sterilisert)</option>
+            </select>
+          </label>
+          <br />
+          <!-- Pet name -->
+          <label for="pet-name">
+            Dyrets navn
+            <input
+              type="text"
+              name="pet-name"
+              id="pet-name"
+              required
+            />
+          </label>
+          <br />
+          <!-- pet age -->
+          <label for="pet-age">Født</label>
+          <input
+            type="date"
+            name="pet-age"
+            id="pet-age"
+          />
+          <br />
+          <label for="pet-breed">Rase/Pelstype</label>
+          <input
+            type="text"
+            name="pet-breed"
+            id="pet-breed"
+            placeholder="feks. langhåret labradoodle"
+            required
+          />
+          <br />
+          <p id="activity-level">Aktivitetsnivå</p>
+          <p>
+            <label for="lavt">
+              <input
+                type="radio"
+                id="lavt"
+                name="activity-level"
+                value="lavt"
+                required
+              />
+              Lavt
+            </label>
+            <label for="medium">
+              <input
+                type="radio"
+                name="activity-level"
+                id="medium"
+                value="Medium"
+              />
+              Medium
+            </label>
+            <label for="høyt">
+              <input
+                type="radio"
+                name="activity-level"
+                id="høyt"
+                value="høyt"
+              />
+              Høyt
+            </label>
+            <br />
+            <!-- <label for="can-live-with">Dyret kan bo med</label>
+          <label for="dogs">
+            <input
+              type="checkbox"
+              name="can-live-with"
+              id="dogs"
+            />
+            Hund</label
+          >
+          <label for="cat">
+            <input
+              type="checkbox"
+              name="can-live-with"
+              id="cat"
+            />
+            Katt</label
+          >
+          <label for="kids">
+            <input
+              type="checkbox"
+              name="can-live-with"
+              id="kids"
+            />
+            Barn</label
+          >
+          <br /> -->
+            <label for="desc">Beskrivelse</label>
+            <br />
+            <textarea
+              id="desc"
+              name="desc"
+              rows="8"
+              cols="35"
+              maxlength="256"
+              title="Skriv litt om adferd og personlighet"
+              required
+            ></textarea>
+            <br />
+            <!-- <label for="reserved">
+            Reservert
+            <input type="checkbox" />
+          </label>
+          <br /> -->
+            <!-- <label for="picture">Last opp ett bilde</label>
+            <input
+              type="file"
+              id="picture"
+              name="picture"
+            /> -->
+            <input type="submit" />
+          </p>
+        </form>
+      </div>
+    </aside>
+    <main>
+      <div id="pets-container"></div>
+    </main>
+  </body>
+</html>

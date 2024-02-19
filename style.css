@@ -1,0 +1,79 @@
+/** @format */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+}
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 100vh;
+  background-color: rgb(226, 225, 225);
+  padding: 12px;
+  gap: 6px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  height: 100vh;
+  background-color: seagreen;
+}
+
+#pet-header {
+  font-size: 26px;
+}
+#main-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#pets-container {
+  display: flex;
+  display: row;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 90%;
+  margin: 20px;
+  /* background-color: beige; */
+}
+
+.pet-container {
+  border-radius: 10px;
+  gap: 10px;
+  padding: 15px 0px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* text-align: center; */
+  width: 250px;
+  height: 400px;
+  background-color: rgb(250, 250, 250);
+}
+
+.pet-container > input:read-only {
+  margin-left: 16px;
+  all: unset;
+  text-wrap: wrap;
+}
+
+#pet-gender {
+  width: min-content;
+}
+
+#pet-description {
+  height: 50px;
+  text-wrap: wrap;
+}
